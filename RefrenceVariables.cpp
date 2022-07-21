@@ -26,6 +26,8 @@ public:
     {
         cout << "The value is : " << value << endl;
         cout << "The reffered value is : " << ref << endl;
+        cout << "Adress of value is : " << &value << endl;
+        cout << "Adress of ref is : " << &ref << endl;
     }
 };
 
