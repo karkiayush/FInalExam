@@ -13,6 +13,7 @@ public:
     }
 
     friend void add(A ob);
+    friend class prog;
 };
 
 void add(A ob)
@@ -25,11 +26,24 @@ void add(A ob)
     cout << "mul = " << ob.mul << endl;
 }
 
+// Friend class
+class prog
+{
+public:
+    void disp(A ob)
+    {
+        cout << "The division is : " << ob.div << endl;
+    }
+};
+
 int main()
 {
     system("clear");
     A ob;
     ob.input();
     add(ob);
+
+    prog p;
+    p.disp(ob);
     return 0;
 }
