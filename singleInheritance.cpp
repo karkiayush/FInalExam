@@ -5,15 +5,28 @@ class Base
 {
 public:
     int age;
-    bool maritialStatus;
+    bool maritialStatus = true;
     void getter()
     {
-        cout << "Enter the age and maritial status of the young man " << endl;
-        cin >> age >> maritialStatus;
+        cout << "Enter the age and of the young man " << endl;
+        cin >> age;
     }
+};
+
+class Derived : public Base
+{
+public:
     void setter()
     {
         cout << "The age and maritial status of the young man is :  " << endl;
-        cout << age << maritialStatus << endl;
+        cout << age << endl
+             << maritialStatus << endl;
     }
 };
+int main()
+{
+    system("clear");
+    Derived d;
+    d.getter();
+    d.setter();
+}
