@@ -5,7 +5,7 @@ When the function length is large and when we do recursive function call then th
 #include <iostream>
 #include <string>
 using namespace std;
-class base
+class based
 {
 public:
     inline void method()
