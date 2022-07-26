@@ -3,6 +3,9 @@ a> TermTestIIRecToPol.cpp
 b> pure polymorphism
 c> lsp illustration via code
 d> operator overloading
+e> Dynamic casting
+f> constant casting
+g> Reinterpret casting
 
 Topic to read
 a> this pointer
