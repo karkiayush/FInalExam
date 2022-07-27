@@ -22,7 +22,8 @@ public:
         cout << name << endl
              << age << endl
              << address << endl
-             << profession << endl;
+             << profession 
+             << endl;
         return 0;
     }
 };
@@ -37,7 +38,10 @@ public:
     string crime;
     void input()
     {
-        cout << "What is the actual crime that the criminal does ? " << endl;
+
+
+        cout << "What is the actual crime that the criminal does ? " 
+        << endl;
         cin >> crime;
     }
 };
