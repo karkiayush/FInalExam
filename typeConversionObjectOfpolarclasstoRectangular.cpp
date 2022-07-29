@@ -19,7 +19,7 @@ public:
     }
     void show()
     {
-        cout << "In polar form:\n\t r=" << r << " and theta=" << th << " and angle = " << ang << endl;
+        cout << "In polar form:\n\t r=" << r << " and theta=" << th << endl;
     }
 };
 
