@@ -1,3 +1,4 @@
+// Polar to rectangle type conversion using the type conversion
 #include <iostream>
 #include <math.h>
 using namespace std;
@@ -6,7 +7,7 @@ using namespace std;
 class polarClass
 {
 public:
-    float r, th;
+    float r, th, ang;
     polarClass()
     {
         // no need
@@ -18,7 +19,7 @@ public:
     }
     void show()
     {
-        cout << "In polar form:\n\t r=" << r << " and theta=" << th;
+        cout << "In polar form:\n\t r=" << r << " and theta=" << th << " and angle = " << ang << endl;
     }
 };
 
