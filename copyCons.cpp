@@ -1,30 +1,34 @@
-// copy constructor make the initial source value null 
-#include<iostream>
+// copy constructor make the initial source value null
+#include <iostream>
 using namespace std;
 class base
 {
 private:
   int age, rollnum, ummer, hajirNumber;
+
 public:
-    base (int a, int r)
+  base(int a, int r)
   {
     age = a;
     rollnum = r;
   }
 
-  void show ()
+  void show()
   {
     cout << "The info of the student is : " << endl;
-    cout << "Age : " << age << endl << "Roll num : " << rollnum << endl;
+    cout << "Age : " << age << endl
+         << "Roll num : " << rollnum << endl;
   }
 
-  void showdata ()
+  void showdata()
   {
-    cout << "rollnum : " << rollnum << endl << "Age : " << age << endl <<
-      "Ummer : " << ummer << endl << "hajirNumber : " << hajirNumber << endl;
+    cout << "rollnum : " << rollnum << endl
+         << "Age : " << age << endl
+         << "Ummer : " << ummer << endl
+         << "hajirNumber : " << hajirNumber << endl;
   }
 
-  base (base & t)
+  base(base &t)
   {
     ummer = t.age;
     hajirNumber = t.rollnum;
@@ -33,10 +37,9 @@ public:
 
 int main()
 {
-    base b(21,33);
-    b.show();
-    cout<<"The work of copy construct is started "<<endl;
-    base b1(b);
-    b1.showdata();
-    
+  base b(21, 33);
+  b.show();
+  cout << "The work of copy construct is started " << endl;
+  base b1(b);
+  b1.showdata();
 }

@@ -2,7 +2,7 @@
 using namespace std;
 class base
 {
-public:
+  public:
   float a, b, prod;
   void input (float x, float y)
   {
@@ -18,7 +18,7 @@ public:
   void show ()
   {
     cout << "Product is : " << prod << endl;
-  }
+  } 
 
   void operator * ()
   {
