@@ -4,35 +4,53 @@ nput form the base class and finally display the result from a function display 
 base class*/
 #include <iostream>
 using namespace std;
-class derived;
-class base
+
+// vector co-ordinates let's assume u = (3, 5) & v = (2, 1)
+// then addition will be w = (3+2, 5+1)
+
+// declaration in global scope
+int sum_a, sum_b;
+
+class Base
 {
+protected:
+    // vector co-ordinates u= (a1, b1) & v=(a2, b2)
+    int a1, b1, a2, b2;
+
 public:
-    int e1, e2, sum;
-    base()
+    void take_input()
     {
-        cout << "enter the two vector coordinates" << endl;
-        cin >> e1 >> e2;
+        cout << "Enter 1st vector's co-ordinated (which is in form of u = (a1, b1) & v = (a2, b2)" << endl
+             << "What is a1 ?" << endl;
+        cin >> a1;
+        cout << "what is b1 ?" << endl;
+        cin >> b1;
+        cout << "What is a2 ?" << endl;
+        cin >> a2;
+        cout << "What is b2 ?" << endl;
+        cin >> b2;
     }
-    friend void output(base &t, derived &d);
+    friend void display();
 };
-void output(base &t, derived &d)
-{
-    cout << "The sum of the vector coordinates " << t.e1 << " & " << t.e2 << " is : " << d.base::sum << endl;
-}
-class derived : public base
+class Derived : public Base
 {
 public:
     void add_vector()
     {
-        sum = e1 + e2;
+        sum_a = a1 + a2;
+        sum_b = b1 + b2;
     }
 };
+void display()
+{
+    cout << "The final result (sum) is : " << sum_a << " i + " << sum_b << " j" << endl;
+}
 
 int main()
 {
-    base b;
-    derived d;
+    Derived d;
+    d.take_input();
     d.add_vector();
-    output(b, d);
+    display();
+    return 0;
 }

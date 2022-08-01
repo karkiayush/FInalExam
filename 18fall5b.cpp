@@ -1,3 +1,4 @@
+// 18fall5b ko
 // Wap that creates the class person with data members Name, age, and address. Create another class Teacher with data member qualification and department. Also create another class Student with data member program and semester. Both class are inherited from the class person. Every class has at least one constructor that uses the base class constructor. Create member function show Data() in each to display the info of the class member
 #include <iostream>
 #include <string>
